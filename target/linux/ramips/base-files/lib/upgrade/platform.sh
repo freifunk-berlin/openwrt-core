@@ -43,6 +43,9 @@ platform_do_upgrade() {
 	ubnt-erx-sfp)
 		nand_do_upgrade "$ARGV"
 		;;
+	tplink,c50-v4)
+		platform_upgrade_tpl_recovery "$ARGV"
+		;;
 	*)
 		default_do_upgrade "$ARGV"
 		;;
