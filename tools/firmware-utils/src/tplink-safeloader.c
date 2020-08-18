@@ -342,10 +342,7 @@ static struct device_info boards[] = {
 			{"default-mac", 0x30000, 0x00020},
 			{"product-info", 0x31100, 0x00100},
 			{"signature", 0x32000, 0x00400},
-			{"os-image", 0x40000, 0x200000},
-			{"file-system", 0x240000, 0x570000},
-			{"soft-version", 0x7b0000, 0x00100},
-			{"support-list", 0x7b1000, 0x00400},
+			{"firmware", 0x40000, 0x780000},
 			{"user-config", 0x7c0000, 0x10000},
 			{"default-config", 0x7d0000, 0x10000},
 			{"log", 0x7e0000, 0x10000},
@@ -426,10 +423,7 @@ static struct device_info boards[] = {
 			{"default-mac", 0x30000, 0x00020},
 			{"product-info", 0x31100, 0x00100},
 			{"signature", 0x32000, 0x00400},
-			{"os-image", 0x40000, 0x200000},
-			{"file-system", 0x240000, 0x570000},
-			{"soft-version", 0x7b0000, 0x00100},
-			{"support-list", 0x7b1000, 0x00400},
+			{"firmware", 0x40000, 0x780000},
 			{"user-config", 0x7c0000, 0x10000},
 			{"default-config", 0x7d0000, 0x10000},
 			{"log", 0x7e0000, 0x10000},
@@ -437,8 +431,8 @@ static struct device_info boards[] = {
 			{NULL, 0, 0}
 		},
 
-		.first_sysupgrade_partition = "os-image",
-		.last_sysupgrade_partition = "support-list",
+		.first_sysupgrade_partition = "firmware",
+		.last_sysupgrade_partition = "firmware",
 	},
 
 	/** Firmware layout for the CPE610V1 */
